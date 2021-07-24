@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import os
 
 
 def show_image(original_image, augmented_image, title):
@@ -14,3 +15,8 @@ def show_image(original_image, augmented_image, title):
     augmented_plt.set_title('augmented image')
     augmented_plt.imshow(augmented_image)
     plt.show(block=True)
+
+
+def createFolder(path):
+    if not os.path.exists(path):
+        os.makedirs(path)
